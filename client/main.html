@@ -1,20 +1,28 @@
 <head>
-  <title>stage-mngr</title>
+  <title>Stage Manager Tool</title>
 </head>
 
 <body>
-  <h1>Welcome to Meteor!</h1>
-
-  {{> hello}}
-  {{> info}}
+  <div id="entities">
+    {{> entities}}
+  </div>
+  <div id="main">
+    {{> scenes}}
+    {{> stage}}
+  </div>
 </body>
 
-<template name="hello">
-  <button>Click Me</button>
+<template name="entities">
+  <button>Entities</button>
   <p>You've pressed the button {{counter}} times.</p>
 </template>
 
-<template name="info">
+<template name="scenes">
+  <button>Scenes</button>
+  <p>You've pressed the button {{counter}} times.</p>
+</template>
+
+<template name="stage">
   <h2>Learn Meteor!</h2>
   <ul>
     <li><a href="https://www.meteor.com/try" target="_blank">Do the Tutorial</a></li>

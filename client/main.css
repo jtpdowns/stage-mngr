@@ -1,1 +1,15 @@
 /* CSS declarations go here */
+#entities {
+  float: left;
+  height: 100%;
+  width: 10%;
+  margin: 10px;
+}
+#main {
+  margin: 10px;
+}
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
