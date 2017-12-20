@@ -3,7 +3,12 @@
     display: flex;
 }
 #sidebar {
+    background-color: #4242f4;
+    color: #ffffff;
     min-width: 250px;
     max-width: 250px;
     height: 100vh;
+}
+#sidebar a {
+    color: #ffffff;
 }
