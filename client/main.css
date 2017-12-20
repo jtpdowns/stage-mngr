@@ -1,16 +1,9 @@
 /* CSS declarations go here */
-#entities {
-  float: left;
-  height: 100%;
-  width: 10%;
+.wrapper {
+    display: flex;
 }
-#main {
-  float: right;
-  height: 100%;
-  width: 90%;
-}
-html, body {
-  height: 100%;
-  margin: 0;
-  padding: 0;
+#sidebar {
+    min-width: 250px;
+    max-width: 250px;
+    height: 100vh;
 }

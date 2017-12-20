@@ -1,33 +1,56 @@
 <head>
-  <title>Stage Manager Tool</title>
+    <title>Stage Manager Tool</title>
 </head>
 
 <body>
-  <div id="entities">
-    {{> entities}}
-  </div>
-  <div id="main">
-    {{> scenes}}
-    {{> stage}}
-  </div>
+    <div class="wrapper">
+        <div id="entities">
+            {{> entities}}
+        </div>
+        <div id="main">
+            {{> scenes}}
+            {{> stage}}
+        </div>
+    </div>
 </body>
 
 <template name="entities">
-  <button>Entities</button>
-  <p>You've pressed the button {{counter}} times.</p>
+    <nav id="sidebar">
+        <div class="sidebar-header">
+            <h3>Entities</h3>
+        </div>
+        <ul class="list-unstyled components">
+            <li>
+                <a href="#cast" data-toggle="collapse" aria-expanded="false">Cast</a>
+                <ul class="collapse list-unstyled" id="cast">
+                    {{#each member in cast}}
+                        <li>{{{member}}}</li>
+                    {{/each}}
+                </ul>
+            </li>
+            <li>
+                <a href="#props" data-toggle="collapse" aria-expanded="false">Props</a>
+                <ul class="collapse list-unstyled" id="props">
+                    {{#each prop in props}}
+                        <li>{{{prop}}}</li>
+                    {{/each}}
+                </ul>
+            </li>
+        </ul>
+    </nav>
 </template>
 
 <template name="scenes">
-  <button>Scenes</button>
-  <p>You've pressed the button {{counter}} times.</p>
+    <button>Scenes</button>
+    <p>You've pressed the button {{counter}} times.</p>
 </template>
 
 <template name="stage">
-  <h2>Learn Meteor!</h2>
-  <ul>
-    <li><a href="https://www.meteor.com/try" target="_blank">Do the Tutorial</a></li>
-    <li><a href="http://guide.meteor.com" target="_blank">Follow the Guide</a></li>
-    <li><a href="https://docs.meteor.com" target="_blank">Read the Docs</a></li>
-    <li><a href="https://forums.meteor.com" target="_blank">Discussions</a></li>
-  </ul>
+    <h2>Learn Meteor!</h2>
+    <ul>
+        <li><a href="https://www.meteor.com/try" target="_blank">Do the Tutorial</a></li>
+        <li><a href="http://guide.meteor.com" target="_blank">Follow the Guide</a></li>
+        <li><a href="https://docs.meteor.com" target="_blank">Read the Docs</a></li>
+        <li><a href="https://forums.meteor.com" target="_blank">Discussions</a></li>
+    </ul>
 </template>
